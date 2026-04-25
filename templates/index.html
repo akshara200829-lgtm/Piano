@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Piano ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="fairy-bg-fixed" aria-hidden="true">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+    <div class="sparkle s1">✦</div>
+    <div class="sparkle s2">✦</div>
+    <div class="sparkle s3">✦</div>
+    <div class="sparkle s4">✦</div>
+    <div class="sparkle s5">✦</div>
+  </div>
+
+  <main class="app">
+
+    <header class="app-header">
+      <div class="title-wrap">
+        
+        <h1 class="title">Piano</h1>
+        <span class="crown">🪄</span>
+      </div>
+      <p class="subtitle">Click the keys or use your keyboard to play</p>
+    </header>
+
+    <section class="piano-stage" aria-label="Piano instrument">
+      <div class="piano">
+        <div class="piano-top">
+          <span class="star-deco">⭐</span>
+          <span class="star-deco mid">🌸</span>
+          <span class="star-deco">⭐</span>
+        </div>
+        <div class="keys-wrap">
+          <div class="white-keys" id="white-keys"></div>
+          <div class="black-keys" id="black-keys"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="note-display" aria-live="polite">
+      <span class="note-bubble" id="note-bubble"></span>
+    </div>
+
+    <div class="kbd-hint">
+      White keys: <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>G</kbd><kbd>H</kbd><kbd>J</kbd>
+      &nbsp;·&nbsp;
+      Black keys: <kbd>W</kbd><kbd>E</kbd><kbd>T</kbd><kbd>Y</kbd><kbd>U</kbd>
+    </div>
+
+  </main>
+
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <script src="{{ url_for('static', filename='js/piano.js') }}"></script>
+</body>
+</html>
